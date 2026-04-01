@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project.orga // snad industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <div class="logo">SNAD // PROJECT.ORGA</div>
+        <div class="header-right">
+          <span id="username"></span>
+          <div id="status-dot" class="dot dot--off"></div>
+          <button id="btn-login" class="btn-login">LOGIN</button>
+        </div>
+      </header>
+
+      <div id="screen-login" class="screen">
+        <div class="login-box">
+          <div class="login-title">PROJECT.ORGA</div>
+          <div class="login-sub">SNAD INDUSTRIES // AUDIOTOOL</div>
+          <button id="btn-login-main" class="btn-primary">
+            MIT AUDIOTOOL ANMELDEN
+          </button>
+        </div>
+      </div>
+
+      <div id="screen-app" class="screen hidden">
+        <div class="toolbar">
+          <input
+            id="search"
+            class="search"
+            type="text"
+            placeholder="PROJEKT SUCHEN..."
+            autocomplete="off"
+          />
+          <div class="divider"></div>
+          <span class="filter-label">SORT</span>
+          <select id="sort" class="select">
+            <option value="name-asc">NAME A–Z</option>
+            <option value="name-desc">NAME Z–A</option>
+          </select>
+        </div>
+
+        <div id="loading" class="loading">LADE PROJEKTE...</div>
+        <div id="project-list" class="project-list"></div>
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <span>PROJECT.ORGA <span class="version">v0.1.0</span></span>
+      <span id="status-count"></span>
+      <span>NEXUS <span class="version">v0.0.12</span></span>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
